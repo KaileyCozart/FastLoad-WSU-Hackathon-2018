@@ -8,12 +8,43 @@ h1, h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+    height: 37px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+button.first {
+    margin-left: 29px;
+}
+
+button.last {
+    float: right;
+    margin-right: 29px;
+}
+
 .content {
     color: white;
-    width: 50%;
-    margin-left: 25%;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    height: 18em;
+    width: 30em;
+    margin-top: -9em;
+    margin-left: -15em;
+
 }
 
 .overlay {
+    height: 100%;
     background-color: black;
 }
