@@ -8,6 +8,11 @@ h1, h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .content {
     color: white;
     width: 50%;
