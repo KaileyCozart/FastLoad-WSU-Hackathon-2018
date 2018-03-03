@@ -11,7 +11,7 @@ h1, h2 {
 button {
     height: 37px;
     width: 200px;
-    border-radius: 50px;
+    border-radius: 500px;
 }
 
 button:focus {
@@ -24,12 +24,7 @@ button:hover {
 }
 
 button.first {
-    margin-left: 29px;
-}
-
-button.last {
-    float: right;
-    margin-right: 29px;
+    align-self: center;
 }
 
 .content {
