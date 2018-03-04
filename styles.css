@@ -225,3 +225,8 @@ button.loginbutton {
     margin-top: -15em;
     margin-left: -25em;
 }
+
+.fb-login-button {
+    height: 100px;
+    width: 100px;
+}
