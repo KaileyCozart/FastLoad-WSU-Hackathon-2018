@@ -243,7 +243,7 @@ button.submitSignin {
     height: 40px;
 }
 
-/* Login */
+/* Login & Api Login*/
 
 button.loginbutton {
     margin-top: 30px;
@@ -267,12 +267,13 @@ button.loginbutton {
     margin-bottom: 25px;
 }
 
-/* Account */
-
 .fb-login-button {
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 50%;
+    margin: 25px 25% 0px 25%;
 }
+
+/* Account */
 
 .accountContent {
     height: 83%;
