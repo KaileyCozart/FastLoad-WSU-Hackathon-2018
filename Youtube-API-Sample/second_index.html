@@ -9,7 +9,7 @@
 	<script>
 		//Adapted From:
 		//https://www.html5rocks.com/en/tutorials/file/dndfiles/
-		function codeAdress(){
+		function codeAddress(){
 			// Check for the various File API support.
 			if (window.File && window.FileReader && window.FileList && window.Blob) {
 				alert('Nice HTML5 support!');
@@ -21,8 +21,27 @@
 		window.onload = codeAddress();
 	</script>  
   	<p id="TokenID">Token ID:</p>
-	  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-	  <button id="upload-button" onclick="uploadFile"> Upload File </button>
+	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	<button id="upload-button" onclick="uploadFile"> Upload File </button>
+	<input type="file" id="files" name="files[]" multiple />
+	<output id="list"></output>
+	<script>
+		function handleFileSelect(evt) {
+			var files = evt.target.files; // FileList object
+
+			// files is a FileList of File objects. List some properties.
+			var output = [];
+			for (var i = 0, f; f = files[i]; i++) {
+			output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+					f.size, ' bytes, last modified: ',
+					f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+					'</li>');
+			}
+			document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  		}
+
+  		document.getElementById('files').addEventListener('change', handleFileSelect, false);
+	</script>
 	</body>
 	<script>
 		function showID(tokenID){
@@ -30,7 +49,7 @@
 		};
 	
 		function onSignIn(googleUser) {
-		// Useful data for your client-side scripts:
+			// Useful data for your client-side scripts:
 			var profile = googleUser.getBasicProfile();
 			showID("ID Token: " + profile.getId());
 			console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -47,7 +66,7 @@
 		};
 
 		function uploadFile(){
-
+			
 		}
 	</script>
 </html>
