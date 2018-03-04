@@ -1,11 +1,11 @@
 <html>
         <head>
             <title> Fastload </title>
-            <link rel="shortcut icon" href="icon.png"></link>
-            <link rel="stylesheet" type="text/css" href="styles.css">
             <script src="facebook.js"></script>
             <script src="fbUpload.js"></script>
             <script src="scripts.js"></script>
+            <link rel="shortcut icon" href="icon.png"></link>
+            <link rel="stylesheet" type="text/css" href="styles.css">
         </head>
         <body>
             <div class = "overlay">
@@ -21,6 +21,17 @@
                 <div id="fade" class="content loginContent">
                     <img class="textHeight" src="LogIn.png"/>
                     <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div>
+                    <span id="signinButton" class="pre-sign-in">
+                        <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
+                                attribute in the following tag with your project's client ID. -->
+                        <span
+                            class="g-signin"
+                            data-callback="signinCallback"
+                            data-clientid="12291928288-bjqft7no9k1phh3fljcggqc0n2obhafr.apps.googleusercontent.com"
+                            data-cookiepolicy="single_host_origin"
+                            data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
+                        </span>
+                    </span>
                     <div class="youtube-login"><h4>Login to YouTube</h4></div>
                     <div class="vimeo-login"><h4>Login to Vimeo</h4></div>
                     <button id="submitButton" class="submitSignin"> Publish </button>
