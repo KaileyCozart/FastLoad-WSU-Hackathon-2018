@@ -1,9 +1,9 @@
 window.onload = function() {
 
 var button = document.getElementById("submitButton");
-
+/*
 	window.alert("This is some alert popup");
-	
+*/
 	/*
 	button.onclick = function() {
 		FB.api(
