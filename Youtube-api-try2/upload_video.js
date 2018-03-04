@@ -85,7 +85,7 @@ UploadVideo.prototype.ready = function(accessToken) {
       }
     }.bind(this)
   });
-  $('#button').on("click", this.handleUploadClicked.bind(this));
+  $('#submitButton').on("click", this.handleUploadClicked.bind(this));
 };
 
 /**
@@ -161,7 +161,7 @@ UploadVideo.prototype.uploadFile = function() {
 
 UploadVideo.prototype.handleUploadClicked = function() {
   $('#button').attr('disabled', true);
-  this.uploadFile($('#file').get(0).files[0]);
+  this.uploadFile($('#fileFinal'));
 };
 
 UploadVideo.prototype.pollForVideoStatus = function() {
