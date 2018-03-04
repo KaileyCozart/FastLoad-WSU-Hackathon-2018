@@ -32,17 +32,13 @@
 		var userYoutubeToken = null;
 		var loadedFilePath = null;
 
-		//Get the file select
+		//Get the file info (size and other)
 		function handleFileSelect(evt) {
 			var f = evt.target.chosenFile; // FileList object
 
 			// files is a FileList of File objects. List some properties.
 			var output = [];
 			
-			output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-					f.size, ' bytes, last modified: ',
-					f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-					'</li>');
 			document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   		}
 		
