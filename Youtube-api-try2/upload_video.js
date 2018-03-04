@@ -153,6 +153,7 @@ UploadVideo.prototype.uploadFile = function() {
       $('.post-upload').show();
       this.pollForVideoStatus();
     }.bind(this)
+    
   });
   // This won't correspond to the *exact* start of the upload, but it should be close enough.
   this.uploadStartTime = Date.now();
@@ -161,6 +162,7 @@ UploadVideo.prototype.uploadFile = function() {
 
 UploadVideo.prototype.handleUploadClicked = function() {
   $('#submitButton').attr('disabled', true);
+  console.log('Andler called after file selectred')
   this.uploadFile($('#fileFinal'));
 };
 
