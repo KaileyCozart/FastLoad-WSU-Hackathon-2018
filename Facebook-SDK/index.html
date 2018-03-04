@@ -14,11 +14,11 @@
       xfbml            : true,
       version          : 'v2.12'
     });
-
+/*
 FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
 });
-
+*/
   };
 
   (function(d, s, id){
@@ -29,9 +29,7 @@ FB.getLoginStatus(function(response) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-LoginManager.getInstance().logInWithPublishPermissions(
-    fragmentOrActivity,
-    Arrays.asList("publish_actions"));
+
 
 FB.api(
     "/{user-id}/videos",
@@ -46,9 +44,10 @@ FB.api(
     }
 );
 
+
 </script>
 
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div>
 
 
 
