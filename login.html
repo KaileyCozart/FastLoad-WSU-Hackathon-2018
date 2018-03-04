@@ -40,13 +40,12 @@
         </div>
     </div>
     <script language="javascript">
-        function check(form) { /*function to check userid & password*/
-            /*the following code checkes whether the entered userid and password are matching*/
+        function check(form) { 
             if (form.userid.value == "Demo" && form.pswrd.value == "2018") {
-                window.open('https://fastload.azurewebsites.net/account.html', '_self', false)/*opens the target page while Id & password matches*/
+                window.open('https://fastload.azurewebsites.net/account.html');
             }
             else {
-                alert("Invalid Password or Username")/*displays error message*/
+                alert("Invalid Password or Username")
             }
         }
     </script>
