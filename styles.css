@@ -125,6 +125,7 @@ input {
     width: 75px;
     float: right;
     border-left: .5px solid white;
+    margin-top: -45px;
 }
 
 .navbarButton:hover {
@@ -194,10 +195,6 @@ button.loginbutton {
 
 .loginContent {
     margin-top: -12em;
-}
-
-.shift {
-    margin-top: -45px;
 }
 
 /* Account */
