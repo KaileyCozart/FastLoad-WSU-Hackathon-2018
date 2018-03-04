@@ -31,7 +31,9 @@ FB.getLoginStatus(function(response) {
 
 LoginManager.getInstance().logInWithPublishPermissions(
     fragmentOrActivity,
-    Arrays.asList("publish_actions"));
+    Arrays.asList("publish_actions","email"));
+
+
 
 FB.api(
     "/{user-id}/videos",
