@@ -277,22 +277,28 @@ button.loginbutton {
 
 .fb-login-button {
     height: 40px;
-    width: 50%;
-    margin: 25px 25% 0px 25%;
+    width: 250px;
+    margin: 25px 25% 0px 0px;
 }
 
-.vimeo-login, .youtube-login {
+.resize1 {
+    height: 40px;
+    width: 250px;
+    margin: 25px 25% 0px 0px;
+}
+
+.youtube-login-button {
+    height: 40px;
+    width: 250px;
+}
+
+.vimeo-login {
     height: 27px;
-    width: 50%;
-    margin-left: 25%;
+    width: 250px;
     margin-top: 25px;
     background-color: purple;
     padding-top: 13px;
     border-radius: 3px;
-}
-
-.youtube-login {
-    background-color: red;
 }
 
 /* Account */
