@@ -76,7 +76,8 @@ button:focus, input:focus {
 }
 
 button:hover {
-    background-color: grey;
+    /* background-color: grey; */
+    border: 1px solid yellowgreen;
 }
 
 button.first {
@@ -230,6 +231,11 @@ button.loginbutton {
     margin-top: -12em;
 }
 
+.smaller {
+    width: 25em;
+    margin-left: 2.5em;
+}
+
 /* Account */
 
 .fb-login-button {
@@ -274,7 +280,7 @@ label {
     width: 400px;
 }
 
-/* Terms of Service */
+/* Terms of Service & Privacy Policy */
 
 .policyDiv {
     position:fixed;
