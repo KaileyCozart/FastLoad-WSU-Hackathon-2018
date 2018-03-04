@@ -160,7 +160,7 @@ UploadVideo.prototype.uploadFile = function() {
 };
 
 UploadVideo.prototype.handleUploadClicked = function() {
-  $('#button').attr('disabled', true);
+  $('#submitButton').attr('disabled', true);
   this.uploadFile($('#fileFinal'));
 };
 
