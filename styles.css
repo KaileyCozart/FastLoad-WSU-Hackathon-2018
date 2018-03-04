@@ -76,7 +76,8 @@ button:focus, input:focus {
 }
 
 button:hover {
-    background-color: grey;
+    /* background-color: grey; */
+    border: 1px solid yellowgreen;
 }
 
 button.first {
@@ -187,6 +188,11 @@ input:focus {
     margin-bottom: 35px;
 }
 
+.lineOne, .lineTwo {
+    font-size: 30px;
+    font-style: normal;
+}
+
 /* Signup */
 
 .signupHeader {
@@ -216,7 +222,7 @@ button.submitSignin {
 
 .displayWarning {
     visibility: visible;
-    color: darkred;
+    color: greenyellow;
     margin-top: 5px;
 }
 
@@ -228,6 +234,11 @@ button.loginbutton {
 
 .loginContent {
     margin-top: -12em;
+}
+
+.smaller {
+    width: 25em;
+    margin-left: 2.5em;
 }
 
 /* Account */
@@ -274,7 +285,7 @@ label {
     width: 400px;
 }
 
-/* Terms of Service */
+/* Terms of Service & Privacy Policy */
 
 .policyDiv {
     position:fixed;
@@ -297,4 +308,10 @@ p {
 
 li {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contact */
+
+.contactContent {
+    margin-top: -14em;
 }
