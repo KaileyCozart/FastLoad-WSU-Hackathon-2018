@@ -53,6 +53,24 @@ button, input {
     background-color: rgba(0, 0, 0, .5);
 }
 
+textarea {
+    display: block;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    padding: 25px;
+}
+
+textarea:focus {
+    border-color: greenyellow;
+    outline: 0px;
+}
+
+/* Buttons & Inputs */
+
 button:focus, input:focus {
     outline: 0px;
 }
@@ -84,6 +102,12 @@ input {
     border-right: 0px;
     border-left: 0px;
 }
+
+input:focus {
+    border-color: greenyellow;
+}
+
+/* Shared Divs */
 
 .content {
     color: white;
@@ -208,25 +232,44 @@ button.loginbutton {
 
 /* Account */
 
-.roundbutton {
-    width: 20%;
-    padding-top: 20%;
-    margin-left: 9.7%;
-    border-radius: 100%;
-}
-
-.roundButtonText {
-    margin-top: -85px;
-}
-
-.roundContent {
-    height: 18em;
-    width: 50em;
-    margin-top: -15em;
-    margin-left: -25em;
-}
-
 .fb-login-button {
     height: 100px;
     width: 100px;
+}
+
+.accountContent {
+    height: 83%;
+    overflow: scroll;
+}
+
+.accountCheckbox {
+    margin-top: 0px;
+    width: 10px;
+    height: 12px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.accountForm {
+    position: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accountHeader {
+    color: white;
+    text-align: center;
+}
+
+.accountInput {
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    width: 400px;
 }

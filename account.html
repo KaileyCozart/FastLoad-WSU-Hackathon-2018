@@ -6,12 +6,49 @@
     </head>
     <body>
         <div class = "overlay">
-            <div class="content roundContent">
-                <h1 class="signupHeader"> Username </h1>
-                <button class="roundbutton"><h4 class="roundButtonText"> Upload </h4></button>
-                <button class="roundbutton"><h4 class="roundButtonText"> Settings <h4></button>
-                <button class="roundbutton"><h4 class="roundButtonText"> Add Account </h4></button>
-                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div>                
+            <div class="navbar">
+                <a href="index.html"><img src="fastload.png" class="logo"/></a>
+                <!--a href="login.html">
+                    <div class="navbarButton navbarButtonLast">
+                        <h6> Log In </h6>
+                    </div>
+                </a>
+                <a href="login.html">
+                    <div  class="navbarButton">
+                        <h6> Upload </h6>
+                    </div>
+                </a-->
+                <div class="navbarButton navbarButtonLast">
+                    <h6> Log In </h6>
+                </div>
+                <div class="navbarButton">
+                    <h6> Upload </h6>
+                </div>
+            </div>
+            <div class="accountContent">
+                <h1 class="accountHeader"> Upload To </h1>
+                <form class="accountForm">
+                    <div>
+                    <label><input class="accountCheckbox" type="checkbox"> YouTube </label> <br />
+                    <label><input class="accountCheckbox" type="checkbox"> Facebook </label> <br />
+                    <label><input class="accountCheckbox" type="checkbox"> Vimeo </label> <br />
+                    </div>
+                </form>
+                <h3 class="accountHeader"> Title </h3>
+                <input class="accountInput" placeholder="title" type="text" name="text" />
+                <h3 class="accountHeader"> Tags </h3>
+                <input class="accountInput" placeholder="tags" type="text" name="text" />
+                <h3 class="accountHeader"> Description </h3>
+                <textarea></textarea>
+                <button id="submitButton" class="submitSignin"> Upload </button>
+                <!--div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div-->
+            </div>
+            <div class="footer">
+                <h6 class="footerText"> 
+                    <a class="underlineHover" href="privacypolicy.html">Privacy Policy</a> : 
+                    <a class="underlineHover" href="termsofservice.html">Terms of Service</a> : 
+                    <a class="underlineHover" href="contact.html">Contact</a>
+                </h6>
             </div>
         </div>
     </body>
