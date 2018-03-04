@@ -13,10 +13,10 @@
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
 		function showID(tokenID){
-			document.getElementByID('TokenID').innerHTML = "Token ID: " + id_token
+			document.getElementByID("TokenID").innerHTML = "Token ID: " + id_token
 		};
 		
-      function onSignIn(googleUser) {
+     function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -28,7 +28,7 @@
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
-		showID(googleUser.getAuthResponse().id_token)
+		showID(id_token)
         console.log("ID Token: " + id_token);
       };
     </script>
