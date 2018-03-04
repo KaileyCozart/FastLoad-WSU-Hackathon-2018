@@ -1,9 +1,9 @@
 
 <html>
-	<head>
-		<title>Google APIs - Sample JS Page</title>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-	</head>
+  <head>
+    <title>Google APIs - Sample JS Page</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
 <body>
 <script>
 
@@ -41,7 +41,7 @@ var selectedFile;
 
       // Call handleAuthClick function when user clicks on "Authorize" button.
       $('#authorize-button').click(function() {
-        handleAuthClick(event);
+        //handleAuthClick(event);
       }); 
 $("#select-file-button").click(function () {
           $("#select-file").click();
@@ -55,9 +55,9 @@ $("#select-file-button").click(function () {
     });
   }
 
-  function handleAuthClick(event) {
+  function handleAuthClick() {
     optionsAuth = new gapi.auth2.SigninOptionsBuilder();
-    optionsAuth.setAppPackageName('http://fastload.azurewebsites.net/');
+    optionsAuth.setAppPackageName('FastLoad');
     optionsAuth.setFetchBasicProfile(True);
     optionsAuth.setPrompt('select_account');
     optionsAuth.setScope('profile').setScope('email');
@@ -475,7 +475,7 @@ $("#select-file-button").click(function () {
 </script>
 
 <div id="buttons">
-  <button id="authorize-button">Authorize</button>
+  <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
   <button id="select-file-button">Select file</button>
     <input id="select-file" type="file" style="display:none"><br><br>
   <button id="upload-file-button">Upload file</button>
