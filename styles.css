@@ -295,6 +295,11 @@ label {
     width: 400px;
 }
 
+#folderButton {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 /* Terms of Service & Privacy Policy */
 
 .policyDiv {
