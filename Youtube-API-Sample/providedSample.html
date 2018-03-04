@@ -52,14 +52,14 @@ $("#select-file-button").click(function () {
   }
 
   function handleAuthClick(event) {
-    options = new gapi.auth2.SigninOptionsBuilder();
-    options.setAppPackageName('http://fastload.azurewebsites.net/');
-    options.setFetchBasicProfile(True);
-    options.setPrompt('select_account');
-    options.setScope('profile').setScope('email');
+    optionsAuth = new gapi.auth2.SigninOptionsBuilder();
+    optionsAuth.setAppPackageName('http://fastload.azurewebsites.net/');
+    optionsAuth.setFetchBasicProfile(True);
+    optionsAuth.setPrompt('select_account');
+    optionsAuth.setScope('profile').setScope('email');
 
     // Sign user in after click on auth button.
-    GoogleAuth.signIn();
+    GoogleAuth.signIn(optionsAuth);
   }
 
   function setSigninStatus() {
