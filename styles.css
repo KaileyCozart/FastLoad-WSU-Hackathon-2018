@@ -3,14 +3,28 @@
 body {
     padding: 0px;
     margin: 0px;
+    background: url(Background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1, h2 {
     text-align: center;
+    font-weight: lighter;
 }
 
 h1, h2, h3 {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    letter-spacing: 3;
+}
+
+h2 {
+    letter-spacing: 1;
 }
 
 h3 {
@@ -23,7 +37,7 @@ button, input {
     width: 200px;
     border-radius: 50px;
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 button:focus, input:focus {
@@ -31,8 +45,7 @@ button:focus, input:focus {
 }
 
 button:hover {
-    color: black;
-    background-color: white;
+    background-color: grey;
 }
 
 button.first {
@@ -68,14 +81,29 @@ input {
     width: 30em;
     margin-top: -9em;
     margin-left: -15em;
+    /*
+    background-color: rgba(128, 128, 128, .6);
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    */
 }
-
-/* Index */
 
 .overlay {
     height: 100%;
-    background-color: black;
+    background-color: rgba(128, 128, 128, .6);
 }
+
+.navbar {
+    background-color: rgba(58, 58, 58, 0.60);
+    height: 60px;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* Index */
 
 /* Signup */
 
