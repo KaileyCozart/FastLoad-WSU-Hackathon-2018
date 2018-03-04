@@ -1,4 +1,6 @@
+<!doctype html>
 <html>
+    <meta charset="utf-8">
         <head>
             <title> Fastload </title>
             <script src="facebook.js"></script>
@@ -7,6 +9,19 @@
             <link rel="shortcut icon" href="icon.png"></link>
             <link rel="stylesheet" type="text/css" href="styles.css">
         </head>
+
+        <span id="signinButton" class="pre-sign-in">
+            <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
+                    attribute in the following tag with your project's client ID. -->
+            <span
+                class="g-signin"
+                data-callback="signinCallback"
+                data-clientid="12291928288-bjqft7no9k1phh3fljcggqc0n2obhafr.apps.googleusercontent.com"
+                data-cookiepolicy="single_host_origin"
+                data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
+            </span>
+        </span>
+
         <body>
             <div class = "overlay">
                 <div class="navbar">
