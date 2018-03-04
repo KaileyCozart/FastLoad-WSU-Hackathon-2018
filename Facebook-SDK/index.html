@@ -14,11 +14,11 @@
       xfbml            : true,
       version          : 'v2.12'
     });
-
+/*
 FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
 });
-
+*/
   };
 
   (function(d, s, id){
@@ -28,11 +28,6 @@ FB.getLoginStatus(function(response) {
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
-/*LoginManager.getInstance().logInWithPublishPermissions(
-    fragmentOrActivity,
-    Arrays.asList("publish_actions","email"));
-
 
 
 
@@ -45,10 +40,10 @@ FB.api(
     function (response) {
       if (response && !response.error) {
         /* handle the result */
- /*     }
+      }
     }
 );
-*/
+
 
 </script>
 
