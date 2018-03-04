@@ -28,19 +28,17 @@
                 <form class="accountForm">
                     <div>
                     <label><input class="accountCheckbox" type="checkbox"> YouTube </label> <br />
-                    <div class="resize1">
-                        <span class="youtube-login-button" id="signinButton" class="pre-sign-in">
-                            <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
-                                    attribute in the following tag with your project's client ID. -->
-                            <span style="position:absolute;right:50%"
-                                class="g-signin"
-                                data-callback="signinCallback"
-                                data-clientid="12291928288-bjqft7no9k1phh3fljcggqc0n2obhafr.apps.googleusercontent.com"
-                                data-cookiepolicy="single_host_origin"
-                                data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
-                            </span>
+                    <div style="text-align:center;position:absolute;right:55%;"><span id="signinButton" class="pre-sign-in">
+                        <!-- IMPORTANT: Replace the value of the <code>data-clientid</code>
+                                attribute in the following tag with your project's client ID. -->
+                        <span style="position:absolute;right:50%;"
+                            class="g-signin"
+                            data-callback="signinCallback"
+                            data-clientid="12291928288-bjqft7no9k1phh3fljcggqc0n2obhafr.apps.googleusercontent.com"
+                            data-cookiepolicy="single_host_origin"
+                            data-scope="https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube">
                         </span>
-                    </div>
+                    </span></div>
                     <label><input class="accountCheckbox" type="checkbox"> Facebook </label> <br />
                     <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div>
                     <label><input class="accountCheckbox" type="checkbox"> Vimeo </label> <br />
