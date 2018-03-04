@@ -56,6 +56,8 @@ $("#select-file-button").click(function () {
   }
 
   function handleAuthClick() {
+    showDiv();
+
     optionsAuth = new gapi.auth2.SigninOptionsBuilder();
     optionsAuth.setAppPackageName('FastLoad');
     optionsAuth.setFetchBasicProfile(True);
@@ -475,7 +477,7 @@ $("#select-file-button").click(function () {
 </script>
 
 <div id="buttons">
-  <button id="authorize-button" onclick="handleAuthClick()">Authorize</button>
+  <button id="authorize-button" onclick="handleAuthClick">Authorize</button>
   <button id="select-file-button">Select file</button>
     <input id="select-file" type="file" style="display:none"><br><br>
   <button id="upload-file-button">Upload file</button>
