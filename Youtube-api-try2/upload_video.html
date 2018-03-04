@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>YouTube API Uploads via CORS</title>
+    <link rel="stylesheet" href="../styles.css"></link>
     <link rel="stylesheet" href="upload_video.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css'>
   </head>
@@ -44,7 +45,7 @@
 
       <div>
         <input input type="file" id="file" class="button" accept="video/*">
-        <button id="button">Upload Video</button>
+        <button id="folderButton" class="submitSignin"> Find File </button>
       <div class="during-upload">
         <p><span id="percent-transferred"></span>% done (<span id="bytes-transferred"></span>/<span id="total-bytes"></span> bytes)</p>
         <progress id="upload-progress" max="1" value="0"></progress>
