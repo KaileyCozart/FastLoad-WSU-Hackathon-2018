@@ -273,3 +273,28 @@ label {
     padding-left: 10px;
     width: 400px;
 }
+
+/* Terms of Service */
+
+.policyDiv {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    height: 25em;
+    width: 50em;
+    margin-top: -15em;
+    margin-left: -25em;
+    border:1px solid #ccc;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+    padding: 25px;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
