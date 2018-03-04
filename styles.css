@@ -281,7 +281,7 @@ button.loginbutton {
     margin: 25px 25% 0px 25%;
 }
 
-.vimeo-login {
+.vimeo-login, .youtube-login {
     height: 27px;
     width: 50%;
     margin-left: 25%;
@@ -289,6 +289,10 @@ button.loginbutton {
     background-color: purple;
     padding-top: 13px;
     border-radius: 3px;
+}
+
+.youtube-login {
+    background-color: red;
 }
 
 /* Account */
