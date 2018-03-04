@@ -17,6 +17,7 @@ limitations under the License.
 var signinCallback = function (result){
   if(result.access_token) {
     var uploadVideo = new UploadVideo();
+    ytToken = access_token;
     uploadVideo.ready(result.access_token);
   }
 };
@@ -79,7 +80,7 @@ UploadVideo.prototype.ready = function(accessToken) {
         $('#channel-name').text(response.items[0].snippet.title);
         $('#channel-thumbnail').attr('src', response.items[0].snippet.thumbnails.default.url);
 
-        $('.pre-sign-in').hide();
+        //$('.pre-sign-in').hide();
         // $('.post-sign-in').show();
       }
     }.bind(this)
@@ -108,7 +109,7 @@ UploadVideo.prototype.uploadFile = function(file) {
   var uploader = new MediaUploader({
     baseUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
     file: file,
-    token: this.accessToken,
+    token: ytToken,
     metadata: metadata,
     params: {
       part: Object.keys(metadata).join(',')
@@ -143,7 +144,7 @@ UploadVideo.prototype.uploadFile = function(file) {
       $('#bytes-transferred').text(bytesUploaded);
       $('#total-bytes').text(totalBytes);
 
-      $('.during-upload').show();
+      //$('.during-upload').show();
     }.bind(this),
     onComplete: function(data) {
       var uploadResponse = JSON.parse(data);
