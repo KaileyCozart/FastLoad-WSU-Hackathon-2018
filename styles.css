@@ -180,24 +180,19 @@ input:focus {
 /* Index */
 
 .lineOne {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-left: 124px;
 }
 
 .lineTwo {
-    margin-bottom: 35px;
+    margin-left: 110px;
+    margin-bottom: 20px;
 }
 
 .lineOne, .lineTwo {
-    font-size: 30px;
-    font-style: normal;
+    height: 40px;
 }
 
 /* Signup */
-
-.signupHeader {
-    margin-bottom: 50px;
-}
 
 .signupContent {
     height: 18em;
@@ -214,6 +209,7 @@ input:focus {
 
 button.submitSignin {
     margin-top: 55px;
+    margin-bottom: 45px;
 }
 
 .disappearWarning {
@@ -224,6 +220,11 @@ button.submitSignin {
     visibility: visible;
     color: greenyellow;
     margin-top: 5px;
+}
+
+.textHeight {
+    margin-left: 177px;
+    height: 40px;
 }
 
 /* Login */
@@ -239,6 +240,15 @@ button.loginbutton {
 .smaller {
     width: 25em;
     margin-left: 2.5em;
+}
+
+.loginText {
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 /* Account */
