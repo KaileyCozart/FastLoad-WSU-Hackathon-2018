@@ -11,13 +11,13 @@
 		//https://www.html5rocks.com/en/tutorials/file/dndfiles/
 		function codeAdress(){
 			// Check for the various File API support.
-			if (window.File && window.FileReader && window.FileList && window.Blob) {
+		if (window.File && window.FileReader && window.FileList && window.Blob) {
 			alert('Nice HTML5 support!');
   			// Great success! All the File APIs are supported.
 		} else {
   			alert('The File APIs are not fully supported in this browser. Use Chrome!');
 		}
-		window.onload = codeAddress;
+		window.onload = codeAddress();
 	</script>  
   	<p id="TokenID">Token ID:</p>
 	  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
