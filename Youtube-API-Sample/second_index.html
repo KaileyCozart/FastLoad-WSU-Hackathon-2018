@@ -11,11 +11,12 @@
 		//https://www.html5rocks.com/en/tutorials/file/dndfiles/
 		function codeAdress(){
 			// Check for the various File API support.
-		if (window.File && window.FileReader && window.FileList && window.Blob) {
-			alert('Nice HTML5 support!');
+			if (window.File && window.FileReader && window.FileList && window.Blob) {
+				alert('Nice HTML5 support!');
   			// Great success! All the File APIs are supported.
-		} else {
-  			alert('The File APIs are not fully supported in this browser. Use Chrome!');
+			} else {
+  				alert('The File APIs are not fully supported in this browser. Use Chrome!');
+			}
 		}
 		window.onload = codeAddress();
 	</script>  
