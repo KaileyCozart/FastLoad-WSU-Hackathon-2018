@@ -278,7 +278,7 @@ button.loginbutton {
 .fb-login-button {
     height: 40px;
     width: 250px;
-    margin: 15px 25% 0px -75px;
+    margin: 15px 25% 20px -75px;
 }
 
 .vimeo-login {
@@ -307,6 +307,10 @@ button.loginbutton {
     margin-bottom: 30px;
 }
 */
+
+.sizing2 {
+    margin-bottom: 30px;
+}
 
 /* Account */
 
