@@ -22,26 +22,28 @@
 	</script>  
   	<p id="TokenID">Token ID:</p>
 	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-	<button id="upload-button" onclick="chooseFile"> Choose File </button>
-	<input type="file" id="files" name="files[]" multiple />
+
+	
+	<input type="file" id="files" name="chosenFile" />
 	<output id="list"></output>
 	<script>
 		function handleFileSelect(evt) {
-			var files = evt.target.files; // FileList object
+			var f = evt.target.chosenFile; // FileList object
 
 			// files is a FileList of File objects. List some properties.
 			var output = [];
-			for (var i = 0, f; f = files[i]; i++) {
+			
 			output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
 					f.size, ' bytes, last modified: ',
 					f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
 					'</li>');
-			}
 			document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   		}
 
   		document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	</script>
+
+
 	</body>
 	<script>
 		function showID(tokenID){
@@ -64,9 +66,5 @@
 			showID("ID Token: " + googleUser.getAuthResponse().id_token);
 			console.log("ID Token: " + id_token);
 		};
-
-		function chooseFile(){
-			
-		}
 	</script>
 </html>
