@@ -4,6 +4,17 @@
         <link rel="shortcut icon" href="icon.png"></link>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="scripts.js"></script>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "Demo" && form.pswrd.value == "2018") {
+                    window.open('https://fastload.azurewebsites.net/account.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Invalid Password or Username")/*displays error message*/
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="overlay">
@@ -19,11 +30,13 @@
             <div id="fade" class="content loginContent">
                 <img class="textHeight" src="LogIn.png"/>
                 <div class="smaller">
+                    <form>
                 <h3> Username </h3>
-                <input class="signupInput" placeholder="username" type="text" name="username" />
+                <input class="signupInput" placeholder="username" type="text" name="userid" />
                 <h3> Password </h3>
-                <input class="signupInput" placeholder="password" type="password" name="password" />
-                </div>
+                <input class="signupInput" placeholder="password" type="password" name="pswrd" />
+                    </form>
+            </div>
                 <a href="account.html"><button class="first loginbutton"> Log In </button></a>
                 <button class="last loginbutton"> I Forgot My Password </button>
             </div>
