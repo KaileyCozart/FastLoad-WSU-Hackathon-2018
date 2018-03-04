@@ -470,12 +470,21 @@ $("#select-file-button").click(function () {
   }
 </script>
 
-<div>
-<button id="authorize-button">Authorize</button>
-<button id="select-file-button">Select file</button>
-  <input id="select-file" type="file" style="display:none"><br><br>
+<div id="buttons">
+  <button id="authorize-button">Authorize</button>
+  <button id="select-file-button">Select file</button>
+    <input id="select-file" type="file" style="display:none"><br><br>
   <button id="upload-file-button">Upload file</button>
 </div>
+
+<div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME</div>
+<input type="button" name="answer" value="Show Div" onclick="showDiv()" />
+
+<script>
+  function showDiv() {
+    document.getElementById('welcomeDiv').style.display = "block";
+  }
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script async defer src="https://apis.google.com/js/api.js" 
