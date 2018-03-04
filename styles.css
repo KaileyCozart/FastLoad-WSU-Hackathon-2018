@@ -125,7 +125,6 @@ input {
     width: 75px;
     float: right;
     border-left: .5px solid white;
-    margin-top: -45px;
 }
 
 .navbarButton:hover {
@@ -185,6 +184,16 @@ input {
 
 button.submitSignin {
     margin-top: 55px;
+}
+
+.disappearWarning {
+    visibility: hidden;
+}
+
+.displayWarning {
+    visibility: visible;
+    color: darkred;
+    margin-top: 5px;
 }
 
 /* Login */
