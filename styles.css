@@ -290,6 +290,11 @@ button.loginbutton {
     border-radius: 3px;
 }
 
+.sizing {
+    height: 300px;
+    width: 500px;
+}
+
 /* Account */
 
 .accountContent {
