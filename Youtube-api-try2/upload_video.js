@@ -79,7 +79,7 @@ UploadVideo.prototype.ready = function(accessToken) {
         $('#channel-name').text(response.items[0].snippet.title);
         $('#channel-thumbnail').attr('src', response.items[0].snippet.thumbnails.default.url);
 
-        $('.pre-sign-in').hide();
+        //$('.pre-sign-in').hide();
         $('.post-sign-in').show();
       }
     }.bind(this)
