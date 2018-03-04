@@ -3,10 +3,11 @@
         <title> Fastload </title>
         <link rel="shortcut icon" href="icon.png"></link>
         <link rel="stylesheet" type="text/css" href="styles.css"></link>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="scripts.js"></script>
     </head>
     <body>
-        <div class = "overlay">
+        <div class="overlay">
             <div class="navbar">
                 <a href="index.html"><img src="fastload.png" class="logo"/></a>
                 <div class="navbarButton navbarButtonLast">
@@ -16,11 +17,11 @@
                     <h6> Upload </h6>
                 </div>
             </div>
-            <div class="content">
+            <div id="fade" class="content">
                 <img class="lineOne" src="VideoUploadTo.png" />
                 <img class="lineTwo" src="MultiplePlatforms.png" />
-                <a href="login.html"><button class="first"> Log In </button></a>
-                <a href="signup.html"><button class="last"> Sign Up </button></a>
+                <a class="changePage" href="login.html"><button class="first"> Log In </button></a>
+                <a class="changePage" href="signup.html"><button class="last"> Sign Up </button></a>
             </div>
             <div class="footer">
                 <h6 class="footerText"> 
