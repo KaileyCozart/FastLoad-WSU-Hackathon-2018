@@ -1,3 +1,19 @@
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+  <title>jQuery Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+
+</html> -->
+
 <html>
     <head>
         <title> Fastload </title>
@@ -20,7 +36,6 @@ FB.getLoginStatus(function(response) {
 });
 */
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -28,9 +43,6 @@ FB.getLoginStatus(function(response) {
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
-
-
 FB.api(
     "/{user-id}/videos",
     "POST",
@@ -43,8 +55,6 @@ FB.api(
       }
     }
 );
-
-
 </script>
 
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" data-scope="publish_actions"></div>
