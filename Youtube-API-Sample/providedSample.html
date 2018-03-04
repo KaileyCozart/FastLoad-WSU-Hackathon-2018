@@ -36,7 +36,7 @@ var selectedFile;
       setSigninStatus();
 
       // Call handleAuthClick function when user clicks on "Authorize" button.
-      $('#execute-request-button').click(function() {
+      $('#authorize-button').click(function() {
         handleAuthClick(event);
       }); 
 $("#select-file-button").click(function () {
@@ -52,8 +52,14 @@ $("#select-file-button").click(function () {
   }
 
   function handleAuthClick(event) {
+    optionsAuth = new gapi.auth2.SigninOptionsBuilder();
+    optionsAuth.setAppPackageName('http://fastload.azurewebsites.net/');
+    optionsAuth.setFetchBasicProfile(True);
+    optionsAuth.setPrompt('select_account');
+    optionsAuth.setScope('profile').setScope('email');
+
     // Sign user in after click on auth button.
-    GoogleAuth.signIn();
+    GoogleAuth.signIn(optionsAuth);
   }
 
   function setSigninStatus() {
@@ -465,7 +471,7 @@ $("#select-file-button").click(function () {
 </script>
 
 <div>
-<button id="execute-request-button">Authorize</button>
+<button id="authorize-button">Authorize</button>
 <button id="select-file-button">Select file</button>
   <input id="select-file" type="file" style="display:none"><br><br>
   <button id="upload-file-button">Upload file</button>
