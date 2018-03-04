@@ -288,11 +288,22 @@ button.loginbutton {
     background-color: purple;
     padding-top: 13px;
     border-radius: 3px;
+    margin-left: -77;
 }
 
-.sizing {
-    height: 100px;
+.sizing1 {
+    height: 50px;
     width: 500px;
+    margin-top: 10px;
+    margin-left: -59px;
+}
+
+.sizing2 {
+    height: 50px;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: -69px;
+    margin-bottom: 30px;
 }
 
 /* Account */
