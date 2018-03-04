@@ -26,34 +26,92 @@
 	
 	<input type="file" id="files" name="chosenFile" />
 	<output id="list"></output>
+	<input type="text" name="fullPathInput" onchange="fullPathUpdate">
+	<button id="upload-file" onclick="uploadYoutube">Upload</button>
 	<script>
+		var userYoutubeToken = null;
+		var loadedFilePath = null;
+
+		//Get the file info (size and other)
 		function handleFileSelect(evt) {
 			var f = evt.target.chosenFile; // FileList object
 
 			// files is a FileList of File objects. List some properties.
 			var output = [];
 			
-			output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-					f.size, ' bytes, last modified: ',
-					f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-					'</li>');
 			document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   		}
+		
+		//Updates value of final file
+		function fullPathUpdate(){
+			loadedFilePath = document.getElementById("fullPathInput").value;
+		}
 
+		//Event listering for new loading of files
   		document.getElementById('files').addEventListener('change', handleFileSelect, false);
-	</script>
 
+		//Uploading to you tube button functon
+		//Code Adapted From (javascript):
+		//https://developers.google.com/youtube/v3/docs/videos/insert
+		function uploadYoutube(){
+			var metadata = createResource({'snippet.categoryId': '22',
+				'snippet.defaultLanguage': '',
+				'snippet.description': 'Description of uploaded video.',
+				'snippet.tags[]': '',
+				'snippet.title': 'Test video upload',
+				'status.embeddable': '',
+				'status.license': '',
+				'status.privacyStatus': 'private',
+				'status.publicStatsViewable': ''
+			});
 
-	</body>
-	<script>
-		function showID(tokenID){
-			document.getElementById("TokenID").innerHTML = tokenID;
+			if (!userYoutubeToken) {
+				alert("You need to authorize the request to proceed.");
+				return;
+			}
+
+			if (!selectedFile) {
+				alert("You need to select a file to proceed.");
+				return;
+			}
+			var params = {'part': 'snippet,status'};
+
+			var uploader = new MediaUploader({
+				baseUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
+				file: selectedFile,
+				token: token,
+				metadata: metadata,
+				params: params,
+				onError: function(data) {
+				var message = data;
+				try {
+					var errorResponse = JSON.parse(data);
+					message = errorResponse.error.message;
+				} finally {
+					alert(message);
+				}
+			}.bind(this),
+			onProgress: function(data) {
+				var currentTime = Date.now();
+				console.log('Progress: ' + data.loaded + ' bytes loaded out of ' + data.total);
+				var totalBytes = data.total;
+				}.bind(this),
+			onComplete: function(data) {
+			var uploadResponse = JSON.parse(data);
+			console.log('Upload complete for video ' + uploadResponse.id);
+			}.bind(this)
+    		});
+
+		uploader.upload();
+		}
+
+		function showID(){
+			document.getElementById("TokenID").innerHTML = "Token ID: " + userYoutubeToken;
 		};
 	
 		function onSignIn(googleUser) {
 			// Useful data for your client-side scripts:
 			var profile = googleUser.getBasicProfile();
-			showID("ID Token: " + profile.getId());
 			console.log("ID: " + profile.getId()); // Don't send this directly to your server!
 			console.log('Full Name: ' + profile.getName());
 			console.log('Given Name: ' + profile.getGivenName());
@@ -62,9 +120,15 @@
 			console.log("Email: " + profile.getEmail());
 
 			// The ID token you need to pass to your backend:
-			var id_token = googleUser.getAuthResponse().id_token;
-			showID("ID Token: " + googleUser.getAuthResponse().id_token);
-			console.log("ID Token: " + id_token);
+			userYoutubeToken = googleUser.getAuthResponse().id_token;
+			if (userYoutubeToken != null){
+				showID("ID Token: " + userYoutubeToken);
+				console.log("ID Token: " + userYoutubeToken);
+			}
+			
 		};
 	</script>
+
+
+	</body>
 </html>
