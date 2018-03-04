@@ -94,7 +94,7 @@ UploadVideo.prototype.ready = function(accessToken) {
  * @method uploadFile
  * @param {object} file File object corresponding to the video to upload.
  */
-UploadVideo.prototype.uploadFile = function(file) {
+UploadVideo.prototype.uploadFile = function() {
   var metadata = {
     snippet: {
       title: $('#title').val(),
@@ -108,7 +108,7 @@ UploadVideo.prototype.uploadFile = function(file) {
   };
   var uploader = new MediaUploader({
     baseUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
-    file: file,
+    file: fileFinal,
     token: ytToken,
     metadata: metadata,
     params: {
