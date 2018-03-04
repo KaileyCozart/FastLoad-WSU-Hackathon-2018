@@ -177,6 +177,22 @@ input:focus {
     text-decoration: underline;
 }
 
+/* Slidy Effects */
+
+#fade {
+    opacity: 0;
+}
+
+#fade.appear {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+#fade.disappear {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
 /* Index */
 
 .lineOne {
