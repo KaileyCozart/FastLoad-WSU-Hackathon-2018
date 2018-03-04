@@ -29,6 +29,22 @@ FB.getLoginStatus(function(response) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
+LoginManager.getInstance().logInWithPublishPermissions(
+    fragmentOrActivity,
+    Arrays.asList("publish_actions"));
+
+FB.api(
+    "/{user-id}/videos",
+    "POST",
+    {
+        "source": "{video-data}"
+    },
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
 
 </script>
 
