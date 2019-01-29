@@ -7,5 +7,3 @@ https://fastload.azurewebsites.net/
 google account:
 fastloadapp@gmail.com
 FastLoad
-
-http://prankhotline.com/profile
